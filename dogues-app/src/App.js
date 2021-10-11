@@ -1,16 +1,16 @@
 import './App.css';
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./Home";
-import DogGallery from "./DogGallery";
-import AboutUs from "./AboutUs";
-import Navigation from "./Navigation";
+import Home from "./components/Home";
+import DogGallery from "./components/DogGallery";
+import AboutUs from "./components/AboutUs";
+import Navigation from "./components/Navigation";
 
 
 function App() {
   return (
     <Router>
-    <div className="App">
+    <div className="App" >
       <Navigation />
       <br></br>
       <Route exact path="/" component={Home} />
