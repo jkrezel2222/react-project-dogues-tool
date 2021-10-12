@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
+import FilterData from "./FilterData";
 
 
 const Home = () => {
@@ -20,22 +21,20 @@ const Home = () => {
                 </Form.Select>
                 </div>
                 <br></br>
-                <div>  
+                <div>
                 <Form.Select aria-label="Default select example">
-                    <option>Select coat type</option>
-                    <option value="ShortCoat">Short Coat</option>
-                    <option value="LongCoat">Long Coat</option>
+                    <option>Select activity level</option>
+                    <option value="Relaxed">Relaxed</option>
+                    <option value="Active">Active</option>
+                    <option value="Working">Working</option>
                 </Form.Select>
                 </div>
                 <br></br>
+
                 <div>
-                <Form.Select aria-label="Default select example">
-                    <option>Select breed type</option>
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                </Form.Select>
+                    <FilterData/>
                 </div>
+
             </div>
         );
     };
