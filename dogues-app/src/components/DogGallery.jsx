@@ -1,4 +1,5 @@
 import React from "react";
+import ls from "local-storage";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import autoMergeLevel2 from "redux-persist/es/stateReconciler/autoMergeLevel2";

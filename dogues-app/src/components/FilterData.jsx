@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 
+
 function FilterData() {
     
     const [error, setError] = useState(null);
@@ -26,7 +27,8 @@ function FilterData() {
         );
     }, []);
 
-    function search(items) {
+    
+    function Search(items) {
         return items.filter((item) => {
             return searchParam.some((newItem) => {
                 return (
@@ -48,23 +50,33 @@ function FilterData() {
                 <div className="wrapper">
                     <div className="search-wrapper">
                     <label htmlFor="search-form">
+                        {/* instead of word Search below, add in a button here called "Search" and onClick event */}
+                        <span>Or search breed name</span>
                         <input
                             type="search"
                             name="search-form"
                             id="search-form"
                             className="search-input"
-                            placeholder="Search breed name"
+                            placeholder="Search"
                             value={q}
                             onChange={(e) => setQ(e.target.value)}/>
 
-                            {/* instead of word Search below, add in a button here called "Search" and onClick event */}
-                            <span>Search</span>
+
                     </label>
                     </div>
-                    <ul>
-                        {search(items).map((item) => (
+                        {Search(items).map((item) => (
+                            <div>
+                                <div>
+                                    <br></br>
+                                </div>
+                                <div> 
                                 <article className="card">
                                     <br></br>
+                                    <div>
+                                        <h3>
+                                            {item.breedName.toUpperCase()}
+                                        </h3>
+                                    </div>
                                     <div>
                                         <img src={item.image} alt={item.breedName} />
                                     </div>
@@ -86,11 +98,15 @@ function FilterData() {
                                                 - Life expectancy: {" "}
                                                 <span>{item.dogInfo.life}</span>
                                             </p>
+                                            <div>
+                                            <br></br>
+                                            </div>
                                         </div>
-                                        </div>
+                                    </div>
                                 </article>
+                                </div>
+                            </div>
                         ))}
-                    </ul>
                 </div>
             );
         }    

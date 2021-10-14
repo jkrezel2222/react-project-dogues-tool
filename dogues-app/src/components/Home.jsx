@@ -1,6 +1,8 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import FilterData from "./FilterData";
+import { HeartFill } from "react-bootstrap-icons";
+import { Heart } from "react-bootstrap-icons";
 
 
 const Home = () => {
@@ -9,11 +11,15 @@ const Home = () => {
                 <div>
                 <h3>Dog breed selector</h3>
                 <br></br>
-                <p>Select from the options below to find your ideal dog breed:</p>
+                <h4>Find your ideal dog, select from the options below</h4>
+                <br></br>
                 </div>
 
                 <div>  
-                <Form.Select aria-label="Default select example">
+                    <button className="heart-button">{<Heart />}</button>
+                    <button className="heart-button-red">{<HeartFill />}</button>
+                    
+                <Form.Select aria-label="Breed size" className="aria-label-home">
                     <option>Select breed size</option>
                     <option value="Small">Small</option>
                     <option value="Medium">Medium</option>
@@ -22,7 +28,7 @@ const Home = () => {
                 </div>
                 <br></br>
                 <div>
-                <Form.Select aria-label="Default select example">
+                <Form.Select aria-label="Activity level" className="aria-label-home">
                     <option>Select activity level</option>
                     <option value="Relaxed">Relaxed</option>
                     <option value="Active">Active</option>
@@ -33,6 +39,7 @@ const Home = () => {
 
                 <div>
                     <FilterData/>
+
                 </div>
 
             </div>

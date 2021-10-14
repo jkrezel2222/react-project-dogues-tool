@@ -16,15 +16,55 @@
   color: cornflowerblue;
 }
 
+.aria-label-home {
+  max-width: 44vw;
+  margin: 0 auto;
+  align-self: center;
+
+}
+
+.heart-button {
+  font-size: 2vw;
+  color: rgb(202, 4, 103);
+  border: none;
+  background-color: transparent;
+
+}
+
+.heart-button-red {
+  font-size: 2vw;
+  color: rgb(202, 4, 103);
+  border: none;
+  background-color: transparent;
+}
+
+/* .dataResult {
+  margin-top: 5px;
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+  overflow: hidden;
+} */
+
+/* .card-hidden {
+  display: none;
+}
+
+.card-open {
+  display: contents;
+} */
+
 img {
   object-fit: cover;
   object-position: center;
   width: 38vw;
   height: 24vw;
+  margin-top: 20px;
 }
 
 p {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 7%;
+  padding-right: 7%;
   text-align: left;
 }

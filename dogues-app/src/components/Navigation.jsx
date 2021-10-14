@@ -7,7 +7,7 @@ const Navigation = () => {
     return (
         <div>
             <br />
-              <Navbar className="me-auto" bg="light" variant="light" expand="lg">
+              <Navbar className="me-auto" bg="light" variant="light">
                 <Container>
                   <Navbar.Brand >Dogues</Navbar.Brand>
                   <NavLink to="/Home">Home</NavLink>
