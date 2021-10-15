@@ -1,14 +1,20 @@
 import React from "react";
-import { HeartFill } from "react-bootstrap-icons";
-import { Heart } from "react-bootstrap-icons";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Checkbox from "@material-ui/core/Checkbox";
+import Favorite from "@material-ui/icons/Favorite";
+import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 
 
 const HeartLikeButton = () => {
     return (
-        <div>
-            
+        <div className="HeartLikeButton">
+            <FormControlLabel 
+            control={<Checkbox icon={<FavoriteBorder />}
+                checkedIcon={<Favorite />}
+            name="checkedH" />}
+            label="Save to gallery" />   
         </div>
-    )
+    );
 }
 
-export default HeartLikeButton
+export default HeartLikeButton;

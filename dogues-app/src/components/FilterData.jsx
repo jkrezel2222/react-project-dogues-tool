@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
+import HeartLikeButton from "./HeartLikeButton";
 
 
 function FilterData() {
@@ -60,8 +60,6 @@ function FilterData() {
                             placeholder="Search"
                             value={q}
                             onChange={(e) => setQ(e.target.value)}/>
-
-
                     </label>
                     </div>
                         {Search(items).map((item) => (
@@ -73,6 +71,7 @@ function FilterData() {
                                 <article className="card">
                                     <br></br>
                                     <div>
+                                    <HeartLikeButton />
                                         <h3>
                                             {item.breedName.toUpperCase()}
                                         </h3>

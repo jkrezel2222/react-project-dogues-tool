@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import FilterData from "./FilterData";
 import { HeartFill } from "react-bootstrap-icons";
 import { Heart } from "react-bootstrap-icons";
+import HeartLikeButton from "./HeartLikeButton";
 
 
 const Home = () => {
@@ -16,8 +17,8 @@ const Home = () => {
                 </div>
 
                 <div>  
-                    <button className="heart-button">{<Heart />}</button>
-                    <button className="heart-button-red">{<HeartFill />}</button>
+                    {/* <button className="heart-button">{<Heart />}</button>
+                    <button className="heart-button-red">{<HeartFill />}</button> */}
                     
                 <Form.Select aria-label="Breed size" className="aria-label-home">
                     <option>Select breed size</option>

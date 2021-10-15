@@ -23,7 +23,13 @@
 
 }
 
-.heart-button {
+.HeartLikeButton {
+  padding-left: 7%;
+  display: block;
+  width: fit-content;
+}
+
+/* .heart-button {
   font-size: 2vw;
   color: rgb(202, 4, 103);
   border: none;
@@ -36,7 +42,7 @@
   color: rgb(202, 4, 103);
   border: none;
   background-color: transparent;
-}
+} */
 
 /* .dataResult {
   margin-top: 5px;
