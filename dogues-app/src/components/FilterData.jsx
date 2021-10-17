@@ -1,7 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Form from "react-bootstrap/Form";
 import HeartLikeButton from "./HeartLikeButton";
+import Spinner from "react-bootstrap/Spinner";
 
+const LoadingSpinner =
+        <Spinner animation="border" role="status" variant="primary" >
+            <span className="visually-hidden">Loading...</span>
+        </Spinner>
 
 function FilterData() {
     
@@ -10,7 +16,7 @@ function FilterData() {
     const [items, setItems] = useState([]);
 
     const [q, setQ] = useState("");
-    const [searchParam] = useState(["breedName"]);
+    const [searchParam] = useState(["breedName", "description"]);
 
     useEffect(() => {
         fetch("https://api-dog-breeds.herokuapp.com/api/dogs")
@@ -40,26 +46,33 @@ function FilterData() {
             });
         });
     }
-
         if (error) {
             return <div>{error.message}</div>;
         } else if (!isLoaded) {
-            return <div>loading ...</div>;
+            return <div>{LoadingSpinner}</div>;
         } else {
-            return (
+            return (                
                 <div className="wrapper">
-                    <div className="search-wrapper">
+                    <div>
+                    <Form.Select style={{width: "17vw"}} value={q} onChange={(e) => setQ(e.target.value)} aria-label="Breed size" className="aria-label-home">
+                        <option>Select breed size</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                    </Form.Select>
+                    </div>
+                    <div><br></br></div>
+                    <div className="search-wrapper" >
+                    <span style={{paddingInline: "8px"}}>Or search breed name</span>
                     <label htmlFor="search-form">
-                        {/* instead of word Search below, add in a button here called "Search" and onClick event */}
-                        <span>Or search breed name</span>
-                        <input
-                            type="search"
-                            name="search-form"
-                            id="search-form"
-                            className="search-input"
+
+                        <Form.Control
+                            type="text"
                             placeholder="Search"
+                            className="adapted-search"
                             value={q}
-                            onChange={(e) => setQ(e.target.value)}/>
+                            onChange={(e) => setQ(e.target.value)
+                            }/>
                     </label>
                     </div>
                         {Search(items).map((item) => (
@@ -67,6 +80,7 @@ function FilterData() {
                                 <div>
                                     <br></br>
                                 </div>
+
                                 <div> 
                                 <article className="card">
                                     <br></br>
@@ -110,5 +124,6 @@ function FilterData() {
             );
         }    
 }
+
 
 export default FilterData;

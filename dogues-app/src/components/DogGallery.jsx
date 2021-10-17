@@ -1,18 +1,28 @@
-import React from "react";
-import ls from "local-storage";
-import { persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
-import autoMergeLevel2 from "redux-persist/es/stateReconciler/autoMergeLevel2";
+// import React from "react";
+// import Container from "react-bootstrap/Container";
+// import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
+// import DogFavourite from "./DogFavourite";
 
 
-const DogGallery = () => {
-        return (
-            <div>
-                <h3>Dog breed gallery</h3>
-                <br></br>
-                <p>Dog breed images will go here</p>
-            </div>
-        );
-    };
+// class DogGallery extends Component {
+//     render()
+//     const state = {
+//         dogsfav: []
+//     };
+//     return (
+//             <div>
+//                 <h3>Dog breed gallery</h3>
+//                 <br></br>
+//                 <Container>
+//                     <Row>
+//                     <Col>
+//                         <DogFavourite />
+//                     </Col>
+//                     </Row>
+//                 </Container>
+//             </div>
+//     ));
+//     };
 
-export default DogGallery;
+// export default DogGallery;

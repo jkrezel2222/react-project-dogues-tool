@@ -13,14 +13,13 @@
 }
 
 .card-list {
-  color: cornflowerblue;
+  color: #346DB7;
 }
 
 .aria-label-home {
-  max-width: 44vw;
+  width: 300px;
   margin: 0 auto;
   align-self: center;
-
 }
 
 .HeartLikeButton {
@@ -29,20 +28,13 @@
   width: fit-content;
 }
 
-/* .heart-button {
-  font-size: 2vw;
-  color: rgb(202, 4, 103);
-  border: none;
-  background-color: transparent;
+.adapted-search {
 
+  
+  margin-top: 10px;
+  align-content: center;
 }
 
-.heart-button-red {
-  font-size: 2vw;
-  color: rgb(202, 4, 103);
-  border: none;
-  background-color: transparent;
-} */
 
 /* .dataResult {
   margin-top: 5px;

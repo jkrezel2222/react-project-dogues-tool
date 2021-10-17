@@ -1,18 +1,23 @@
 import React from "react";
 import {NavLink} from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
+import Nav from "react-bootstrap/Nav";
 import Container from 'react-bootstrap/Container';
 
 const Navigation = () => {
     return (
         <div>
             <br />
-              <Navbar className="me-auto" bg="light" variant="light" expand="lg">
-                <Container>
+              <Navbar bg="light" variant="light" expand="lg">
+              <Nav className="me-auto">
+                <Container style={{height: "25px"}}>
+
                   <Navbar.Brand >Dogues</Navbar.Brand>
-                  <NavLink to="/Home">Home</NavLink>
+                  <NavLink to="/Home" style={{paddingRight: "15px", paddingLeft: "15px"}} >Home</NavLink>
                   <NavLink to="/AboutUs">About Us</NavLink>
+                  
                 </Container>
+                </Nav>
               </Navbar>
         </div>
     );

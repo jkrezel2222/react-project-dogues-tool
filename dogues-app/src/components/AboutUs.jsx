@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import DogGallery from "./DogGallery";
 
 class AboutUs extends Component {
 
@@ -16,6 +17,8 @@ class AboutUs extends Component {
                 <p>
                     Dogues are delighted to bring you information to help you with the furry love in your life.
                 </p>
+
+                <DogGallery />
 
             </section>
         );
