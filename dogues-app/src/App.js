@@ -1,8 +1,8 @@
-import './App.css';
+import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/Home";
-import DogGallery from "./components/DogGallery";
+import ContactUs from "./components/ContactUs";
 import AboutUs from "./components/AboutUs";
 import Navigation from "./components/Navigation";
 
@@ -16,7 +16,7 @@ function App() {
       <br></br>
       <Route exact path="/" component={Home} />
       <Route exact path="/Home" component={Home} />
-      {/* <Route exact path="/DogGallery" component={DogGallery} /> */}
+      <Route exact path="/ContactUs" component={ContactUs} />
       <Route exact path="/AboutUs" component={AboutUs} />
     </div>
     </Router>

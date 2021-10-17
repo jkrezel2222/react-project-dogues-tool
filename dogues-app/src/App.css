@@ -8,10 +8,6 @@
   margin: 0 auto;
 }
 
-.card-description {
-  
-}
-
 .card-list {
   color: #346DB7;
 }
@@ -29,29 +25,9 @@
 }
 
 .adapted-search {
-
-  
   margin-top: 10px;
   align-content: center;
 }
-
-
-/* .dataResult {
-  margin-top: 5px;
-  width: 300px;
-  height: 200px;
-  background-color: white;
-  box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
-  overflow: hidden;
-} */
-
-/* .card-hidden {
-  display: none;
-}
-
-.card-open {
-  display: contents;
-} */
 
 img {
   object-fit: cover;
@@ -65,4 +41,8 @@ p {
   padding-left: 7%;
   padding-right: 7%;
   text-align: left;
+}
+
+h4 {
+  text-align: center;
 }

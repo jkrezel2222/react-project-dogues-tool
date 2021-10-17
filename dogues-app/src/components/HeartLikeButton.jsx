@@ -7,37 +7,22 @@ import { useState } from "react";
 
 
 function HeartLikeButton() {
-
-    const [isClicked, setIsClicked] = useState(false)
+    const [isClicked, setIsClicked] = useState(false);
 
     function handleClick() {
         setIsClicked(prevValue => {
             return !prevValue
-        })
+        });
     }
     console.log(isClicked)
 
     return (
         <div className="HeartLikeButton">
             <FormControlLabel 
-            onClick={handleClick} control={<Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} name="checkedH" />} label="Save to gallery" />
+            onClick={handleClick} control={<Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} name="checkedH" />} label="" />
             {isClicked}
         </div>
     );
 }
 
 export default HeartLikeButton;
-
-
-
-// onClick={toggleSwitch} />
-//    {toggle ? <span></span> : <span></span>}
-
-//    if toggleSwitch === true => {
-
-//    } 
-
-    // const [toggle, setToggle] = useState(false);
-    // const toggleSwitch = () => {
-    //     toggle ? setToggle(false) : setToggle(true);
-    // }

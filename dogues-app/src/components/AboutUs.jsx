@@ -1,31 +1,20 @@
 import React, { Component } from "react";
-import DogGallery from "./DogGallery";
+
 
 class AboutUs extends Component {
-
-    // state = {
-
-    // };
-
-    //componentDidMount() here
-
     render() {
         return(
             <section>
-                <h3>About Us</h3>
+                <h3 style={{color: "#346DB7"}}>About Us</h3>
                 <br></br>
-                <p>
-                    Dogues are delighted to bring you information to help you with the furry love in your life.
-                </p>
-
-                <DogGallery />
-
+                <div>
+                    <p style={{textAlign: "center"}}>
+                    Dogues are delighted to bring you tools like the dog breed selector to help you find the furry love of your life.
+                    </p>
+                </div>
             </section>
         );
-
     }
-
-
 }
 
 export default AboutUs;

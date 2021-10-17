@@ -1,3 +1,6 @@
+A dog breed selector tool to help you find your dream dog.
+Use the select dropdown to select a breed by breed size or use the search bar to type in a full or partial breed name.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

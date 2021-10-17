@@ -9,10 +9,8 @@ const Home = () => {
                 <h3 style={{color: "#346DB7"}}>Dog breed selector</h3>
                 </div>
                 <br></br>
-
                 <div>
                     <FilterData/>
-
                 </div>
 
             </div>

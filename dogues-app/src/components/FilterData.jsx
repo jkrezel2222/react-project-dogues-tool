@@ -5,7 +5,7 @@ import HeartLikeButton from "./HeartLikeButton";
 import Spinner from "react-bootstrap/Spinner";
 
 const LoadingSpinner =
-        <Spinner animation="border" role="status" variant="primary" >
+        <Spinner animation="border" role="status" variant="light" >
             <span className="visually-hidden">Loading...</span>
         </Spinner>
 
@@ -33,7 +33,6 @@ function FilterData() {
         );
     }, []);
 
-    
     function Search(items) {
         return items.filter((item) => {
             return searchParam.some((newItem) => {
@@ -65,7 +64,6 @@ function FilterData() {
                     <div className="search-wrapper" >
                     <span style={{paddingInline: "8px"}}>Or search breed name</span>
                     <label htmlFor="search-form">
-
                         <Form.Control
                             type="text"
                             placeholder="Search"
@@ -86,7 +84,7 @@ function FilterData() {
                                     <br></br>
                                     <div>
                                     <HeartLikeButton />
-                                        <h3>
+                                        <h3 key="item.id">
                                             {item.breedName.toUpperCase()}
                                         </h3>
                                     </div>
@@ -94,11 +92,11 @@ function FilterData() {
                                         <img src={item.image} alt={item.breedName} />
                                     </div>
                                     <br></br>
-                                        <div>
+                                        <div key="item.id">
                                         <p className="card-description">
                                             {item.description}
                                         </p>
-                                        <div className="card-list">
+                                        <div className="card-list" key="item.id">
                                             <p>
                                                 - Height: {" "}
                                                 <span>{item.dogInfo.height}</span>
